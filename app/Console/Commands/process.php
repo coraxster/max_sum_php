@@ -36,12 +36,13 @@ class process extends Command
         }
 
         $coastIndexes = $this->dynamicMaxSumElements($coasts, $this->option('sum'));
+
         $total = 0;
         foreach ($coastIndexes as $coastIndex){
-            echo($records[$coastIndex][0] . ' - ' . $records[$coastIndex][1] . PHP_EOL);
+            $this->line($records[$coastIndex][0] . ' - ' . $records[$coastIndex][1]);
             $total = $total + $records[$coastIndex][1];
         }
-        echo('Total: ' . $total . PHP_EOL);
+        $this->info('Total: ' . $total);
     }
 
 

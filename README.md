@@ -7,3 +7,7 @@ put file to /storage/app
 
 then
 php artisan process --sum=200 --csv_file=products.csv
+
+
+#RUN TEST
+phpunit
